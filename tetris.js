@@ -99,12 +99,15 @@ var
 			tetris.intval = setInterval('tetris.timeStep()', 2000 / tetris.level);
 		},
 
-		newBrick: function(color, colorLight, colorDark)
+		newBrick: function(isNext, color, colorLight, colorDark)
 		{
 			var brick = document.createElement('div');
 
+      var shape = ( isNext ) ? tetris.shapeNumNext : tetris.shapeNum,
+      rotType = ( isNext ) ? tetris.shapeRotNext : tetris.shapeRot;
+
       // apply styles via class 
-      switch( tetris.shapeNum ){
+      switch( shape ){
         case 0:
           brick.className += 'chair_right';
         break;
@@ -129,15 +132,15 @@ var
       }
 
       // modify background image via class
-      switch( tetris.shapeRot ){
+      switch( rotType ){
         case 1:
-          brick.className += 'rot_90';
+          brick.className += ' rot_90';
         break;
         case 2:
-          brick.className += 'rot_180';
+          brick.className += ' rot_180';
         break;
         case 3:
-          brick.className += 'rot_270';
+          brick.className += ' rot_270';
         break;
       }
 
@@ -180,7 +183,7 @@ var
 				for ( var i = 0; i < brickCount; i ++ )
 				{
 					tetris.bricks[i] = tetris.newBrick(
-						tetris.brickLib[tetris.shapeNum][64], tetris.brickLib[tetris.shapeNum][65], tetris.brickLib[tetris.shapeNum][66]
+						false, tetris.brickLib[tetris.shapeNum][64], tetris.brickLib[tetris.shapeNum][65], tetris.brickLib[tetris.shapeNum][66]
 						);
 
 					tetris.bricks[i].num = tetris.shapeCount;
@@ -230,7 +233,7 @@ var
 					if ( tetris.brickLib[tetris.shapeNumNext][ver * 4 + hor + tetris.shapeRotNext * 16] )
 					{
 						brick = tetris.newBrick(
-							tetris.brickLib[tetris.shapeNumNext][64], tetris.brickLib[tetris.shapeNumNext][65], tetris.brickLib[tetris.shapeNumNext][66]
+							true, tetris.brickLib[tetris.shapeNumNext][64], tetris.brickLib[tetris.shapeNumNext][65], tetris.brickLib[tetris.shapeNumNext][66]
 							);
 
 						brick.style.left = hor * tetris.brickSize + 'px';

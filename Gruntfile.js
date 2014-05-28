@@ -5,31 +5,34 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+    "clean": ["./assets/css/gbm-tetris.css.map", "./assets/css/gbm-tetris.css"],
     "less": {
       "dev": {
         "options": {
           "compress": false,
           "sourceMap": true,
           "sourceMapFilename": "assets/css/gbm-tetris.css.map",
-          "sourceMapBasepath": "assets/css/"
+          "sourceMapBasepath": "assets/less/",
+          "sourceMapRootpath": "../less/",
+          "sourceMapURL": "../css/gbm-tetris.css.map"
         },
         "files": {
-          "expand": true,
-          "src": ["assets/less/**/*.less"],
-          "dest": "assets/css/gbm-tetris.css"
+         "assets/css/gbm-tetris.css": ["assets/less/*.less"]
         }
       }
     },
     "autoprefixer": {
       "no_dest": {
-       "src": "assets/css/*.css"
+        "src": ["assets/css/*.css", "!assets/css/*.map"]
       }
     },
     "watch": {
-        "files": ['<%= less.dev.src %>'],
+      "styles": {
+        "files": ['assets/**/*.less'],
         "tasks": "default"
+      }
     }
   });
-  grunt.registerTask('default', ['less:dev', 'autoprefixer']);
+  grunt.registerTask('default', ['clean', 'less:dev', 'autoprefixer']);
   //grunt.registerTask('build', ['less:production', 'autoprefixer']);
 };
