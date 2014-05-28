@@ -103,18 +103,41 @@ var
 		{
 			var brick = document.createElement('div');
 
-      switch( tetris.shapeNum + tetris.shapeRot ){
+      // apply styles via class 
+      switch( tetris.shapeNum ){
         case 0:
-          brick.className += 'chair_right_0';
+          brick.className += 'chair_right';
         break;
         case 1:
-          brick.className += 'chair_right_90';
+          brick.className += 'couch';
         break;
         case 2:
-          brick.className += 'chair_right_180';
+          brick.className += 'chair_left';
         break;
         case 3:
-          brick.className += 'chair_right_270';
+          brick.className += 'table';
+        break;
+        case 4:
+          brick.className += 'box';
+        break;
+        case 5:
+          brick.className += 'carpets_right';
+        break;
+        case 6:
+          brick.className += 'carpets_left';
+        break;
+      }
+
+      // modify background image via class
+      switch( tetris.shapeRot ){
+        case 1:
+          brick.className += 'rot_90';
+        break;
+        case 2:
+          brick.className += 'rot_180';
+        break;
+        case 3:
+          brick.className += 'rot_270';
         break;
       }
 
