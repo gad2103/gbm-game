@@ -1,7 +1,7 @@
 /* Normalize */
 
 #tetris * {
-	background-color: transparent;
+	/* background-color: transparent; */
 	border: none;
 	font-size: 1em;
 	font-weight: inherit;
@@ -47,15 +47,15 @@
 	}
 
 #tetris-main, #tetris-overlay, #tetris-side {
-	height: 600px;
+	height: 680px;
 }
 
 #tetris-main, #tetris-overlay {
-	width: 300px;
+	width: 340px;
 }
 
 #tetris-main {
-	background: #202;
+	background: #d3d3d3;
 	float: left;
 	overflow: hidden;
 	position: relative;
@@ -88,7 +88,7 @@
 	color: #FFF;
 	float: right;
 	text-align: left;
-	width: 152px;
+	width: 187px;
 }
 
 	#tetris-side-inner {
@@ -117,7 +117,7 @@
 	position: relative;
 	height: 120px;
 	margin-bottom: 1em;
-	width: 120px;
+	width: 136px;
 }
 
 	#tetris-next-inner {

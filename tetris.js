@@ -1,6 +1,6 @@
 var
 	tetris = {
-		brickSize:       30,
+		brickSize:       34,
 		brickBorderSize: 2,
 		mainWinWidth:    10,
 		mainWinHeight:   20,
@@ -99,52 +99,60 @@ var
 			tetris.intval = setInterval('tetris.timeStep()', 2000 / tetris.level);
 		},
 
-		newBrick: function(isNext, color, colorLight, colorDark)
+		newBrick: function(isNext, brickNum, color, colorLight, colorDark)
 		{
 			var brick = document.createElement('div');
 
       var shape = ( isNext ) ? tetris.shapeNumNext : tetris.shapeNum,
-      rotType = ( isNext ) ? tetris.shapeRotNext : tetris.shapeRot;
+      rotType = ( isNext ) ? tetris.shapeRotNext : tetris.shapeRot,
+      shapeName, rotName, classes;
 
       // apply styles via class 
       switch( shape ){
         case 0:
-          brick.className += 'chair_right';
+          shapeName = 'chair_right';
         break;
         case 1:
-          brick.className += 'couch';
+          shapeName = 'couch';
         break;
         case 2:
-          brick.className += 'chair_left';
+          shapeName = 'chair_left';
         break;
         case 3:
-          brick.className += 'table';
+          shapeName = 'table';
         break;
         case 4:
-          brick.className += 'box';
+          shapeName = 'box';
         break;
         case 5:
-          brick.className += 'carpets_right';
+          shapeName = 'carpets_right';
         break;
         case 6:
-          brick.className += 'carpets_left';
+          shapeName = 'carpets_left';
         break;
       }
 
       // modify background image via class
       switch( rotType ){
         case 1:
-          brick.className += ' rot_90';
+          rotName = 'rot_90';
         break;
         case 2:
-          brick.className += ' rot_180';
+          rotName = 'rot_180';
         break;
         case 3:
-          brick.className += ' rot_270';
+          rotName = 'rot_270';
+        break;
+        default:
+          rotName = 'rot_0';
         break;
       }
 
-			brick.setAttribute('style', 'background: ' + color + '; border-color: ' + colorLight + ' ' + colorDark + ' ' + colorDark + ' ' + colorLight + '; border-width: ' + tetris.brickBorderSize + 'px; border-style: solid; height: ' + ( tetris.brickSize - tetris.brickBorderSize * 2 ) + 'px; left: 0; top: 0; width: ' + ( tetris.brickSize - tetris.brickBorderSize * 2 ) + 'px; position: absolute;');
+      classes = 'single_brick ' + 'icon-sprite-' + shapeName + '-' + brickNum + '-0' + ' ' + rotName;
+      brick.className += classes;
+
+			//brick.setAttribute('style', 'background: ' + color + '; height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');
+			brick.setAttribute('style', 'height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');
 
 			return brick;
 		},
@@ -183,7 +191,7 @@ var
 				for ( var i = 0; i < brickCount; i ++ )
 				{
 					tetris.bricks[i] = tetris.newBrick(
-						false, tetris.brickLib[tetris.shapeNum][64], tetris.brickLib[tetris.shapeNum][65], tetris.brickLib[tetris.shapeNum][66]
+						false, i, tetris.brickLib[tetris.shapeNum][64], tetris.brickLib[tetris.shapeNum][65], tetris.brickLib[tetris.shapeNum][66]
 						);
 
 					tetris.bricks[i].num = tetris.shapeCount;
@@ -233,7 +241,7 @@ var
 					if ( tetris.brickLib[tetris.shapeNumNext][ver * 4 + hor + tetris.shapeRotNext * 16] )
 					{
 						brick = tetris.newBrick(
-							true, tetris.brickLib[tetris.shapeNumNext][64], tetris.brickLib[tetris.shapeNumNext][65], tetris.brickLib[tetris.shapeNumNext][66]
+							true, ver, tetris.brickLib[tetris.shapeNumNext][64], tetris.brickLib[tetris.shapeNumNext][65], tetris.brickLib[tetris.shapeNumNext][66]
 							);
 
 						brick.style.left = hor * tetris.brickSize + 'px';

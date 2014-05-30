@@ -26,6 +26,17 @@ module.exports = function (grunt) {
         "src": ["assets/css/*.css", "!assets/css/*.map"]
       }
     },
+    "sprite": {
+      "all": {
+        "src": "assets/img/*.png",
+        "destImg": "assets/img/spritesheet.png",
+        "destCSS": "assets/css/sprites.css",
+        "algorithm": "binary-tree",
+        "cssVarMap": function(sprite){
+          sprite.name = "sprite-" + sprite.name;
+        }
+      }
+    },
     "watch": {
       "styles": {
         "files": ['assets/**/*.less'],
@@ -33,6 +44,7 @@ module.exports = function (grunt) {
       }
     }
   });
-  grunt.registerTask('default', ['clean', 'less:dev', 'autoprefixer']);
+  grunt.registerTask('default', ['clean', 'sprite:all', 'less:dev', 'autoprefixer']);
+  grunt.registerTask('sprites', ['sprite:all']);
   //grunt.registerTask('build', ['less:production', 'autoprefixer']);
 };
