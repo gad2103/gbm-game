@@ -1,0 +1,53 @@
+
+$brick_bg:lightSlateGray;
+
+// list of items with image backgrounds
+$furniture_items: couch, box, table, chair_left, chair_right, beds_left, beds_right; 
+
+// brick size
+$brick_wh: 34px;
+
+.single_brick {
+  background-color: $brick_bg;
+}
+
+@for $i from 0 through 3 {
+  @each $item in $furniture_items {
+    .icon-sprite-#{$item}-#{$i}{
+      $xpos:'';
+      $ypos:'';
+      background-image: url('../img/spritesheet.png');
+      @if $item == couch { $xpos: -$brick_wh*( 5 + $i ); $ypos:  0px; }
+      @if $item == box { 
+        @if $i < 2 {
+          $xpos: -$brick_wh*( $i + 1 );
+          $ypos: 0px; 
+        } @else {
+          $xpos: -$brick_wh*( $i - 1 );
+          $ypos: -$brick_wh; 
+        }
+      }
+      background-position: $xpos $ypos;
+    }
+  }
+}
+
+
+/*.icon-sprite-couch-0 {
+background-image: url(../img/spritesheet.png);
+background-position: 0px -68px;
+width: 136px;
+height: 34px;
+}
+.icon-sprite-files-archive-box {
+background-image: url(../img/spritesheet.png);
+background-position: 0px 0px;
+width: 68px;
+height: 68px;
+}
+.icon-sprite-table {
+background-image: url(../img/spritesheet.png);
+background-position: -68px 0px;
+width: 102px;
+height: 68px;
+}*/

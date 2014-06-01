@@ -148,7 +148,7 @@ var
         break;
       }
 
-      classes = 'single_brick ' + 'icon-sprite-' + shapeName + '-' + brickNum + '-0' + ' ' + rotName;
+      classes = 'single_brick ' + 'icon-sprite-' + shapeName + '-' + brickNum + ' ' + rotName;
       brick.className += classes;
 
 			//brick.setAttribute('style', 'background: ' + color + '; height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');

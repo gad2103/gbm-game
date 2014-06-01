@@ -5,19 +5,14 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-    "clean": ["./assets/css/gbm-tetris.css.map", "./assets/css/gbm-tetris.css"],
-    "less": {
+    "clean": ["./assets/css/gbm-tetris.css.map", "./assets/css/gbm-tetris.css", "assets/img/spritesheet.png"],
+    "sass": {
       "dev": {
         "options": {
-          "compress": false,
-          "sourceMap": true,
-          "sourceMapFilename": "assets/css/gbm-tetris.css.map",
-          "sourceMapBasepath": "assets/less/",
-          "sourceMapRootpath": "../less/",
-          "sourceMapURL": "../css/gbm-tetris.css.map"
+          "sourcemap": true
         },
         "files": {
-         "assets/css/gbm-tetris.css": ["assets/less/*.less"]
+         "assets/css/gbm-tetris.css": ["assets/sass/*.scss"]
         }
       }
     },
@@ -31,7 +26,7 @@ module.exports = function (grunt) {
         "src": "assets/img/*.png",
         "destImg": "assets/img/spritesheet.png",
         "destCSS": "assets/css/sprites.css",
-        "algorithm": "binary-tree",
+        "algorithm": "left-right",
         "cssVarMap": function(sprite){
           sprite.name = "sprite-" + sprite.name;
         }
@@ -39,12 +34,11 @@ module.exports = function (grunt) {
     },
     "watch": {
       "styles": {
-        "files": ['assets/**/*.less'],
+        "files": ['assets/**/*.scss'],
         "tasks": "default"
       }
     }
   });
-  grunt.registerTask('default', ['clean', 'sprite:all', 'less:dev', 'autoprefixer']);
+  grunt.registerTask('default', ['clean', 'sprite:all', 'sass:dev', 'autoprefixer']);
   grunt.registerTask('sprites', ['sprite:all']);
-  //grunt.registerTask('build', ['less:production', 'autoprefixer']);
 };

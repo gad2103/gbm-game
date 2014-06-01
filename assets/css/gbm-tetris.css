@@ -1,53 +1,135 @@
-/*
-Icon classes can be used entirely standalone. They are named after their original file names.
-
-```html
-<i class="icon-home"></i>
-```
-*/
-.icon-sprite-blue-sofa {
-  background-image: url(../img/spritesheet.png);
-  background-position: -170px -170px;
-  width: 136px;
-  height: 34px;
-}
-.icon-sprite-files-archive-box {
-  background-image: url(../img/spritesheet.png);
-  background-position: 0px -170px;
-  width: 68px;
-  height: 68px;
-}
-.icon-sprite-spritesheet {
-  background-image: url(../img/spritesheet.png);
-  background-position: 0px 0px;
-  width: 306px;
-  height: 170px;
-}
-.icon-sprite-table {
-  background-image: url(../img/spritesheet.png);
-  background-position: -68px -170px;
-  width: 102px;
-  height: 68px;
-}
 .single_brick {
-  background-color: #ffffff;
-}
-.icon-sprite-couch-0-0 {
-  background-image: url(../img/spritesheet.png);
-  background-position: 0px -68px;
-  width: 136px;
-  height: 34px;
+  background-color: lightslategray; }
+
+.icon-sprite-couch-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -170px 0px; }
+
+.icon-sprite-box-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -34px 0px; }
+
+.icon-sprite-table-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_left-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_right-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_left-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_right-0 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-couch-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -204px 0px; }
+
+.icon-sprite-box-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -68px 0px; }
+
+.icon-sprite-table-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_left-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_right-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_left-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_right-1 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-couch-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -238px 0px; }
+
+.icon-sprite-box-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -34px -34px; }
+
+.icon-sprite-table-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_left-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_right-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_left-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_right-2 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-couch-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -272px 0px; }
+
+.icon-sprite-box-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: -68px -34px; }
+
+.icon-sprite-table-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_left-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-chair_right-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_left-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+.icon-sprite-beds_right-3 {
+  background-image: url("../img/spritesheet.png");
+  background-position: "" ""; }
+
+/*.icon-sprite-couch-0 {
+background-image: url(../img/spritesheet.png);
+background-position: 0px -68px;
+width: 136px;
+height: 34px;
 }
 .icon-sprite-files-archive-box {
-  background-image: url(../img/spritesheet.png);
-  background-position: 0px 0px;
-  width: 68px;
-  height: 68px;
+background-image: url(../img/spritesheet.png);
+background-position: 0px 0px;
+width: 68px;
+height: 68px;
 }
 .icon-sprite-table {
-  background-image: url(../img/spritesheet.png);
-  background-position: -68px 0px;
-  width: 102px;
-  height: 68px;
-}
+background-image: url(../img/spritesheet.png);
+background-position: -68px 0px;
+width: 102px;
+height: 68px;
+}*/
+
 /*# sourceMappingURL=gbm-tetris.css.map */
