@@ -110,13 +110,13 @@ var
       // apply styles via class 
       switch( shape ){
         case 0:
-          shapeName = 'chair_right';
+          shapeName = 'chair-right';
         break;
         case 1:
           shapeName = 'couch';
         break;
         case 2:
-          shapeName = 'chair_left';
+          shapeName = 'chair-left';
         break;
         case 3:
           shapeName = 'table';
@@ -125,30 +125,30 @@ var
           shapeName = 'box';
         break;
         case 5:
-          shapeName = 'carpets_right';
+          shapeName = 'carpets-right';
         break;
         case 6:
-          shapeName = 'carpets_left';
+          shapeName = 'carpets-left';
         break;
       }
 
       // modify background image via class
       switch( rotType ){
         case 1:
-          rotName = 'rot_90';
+          rotName = 'rot-1';
         break;
         case 2:
-          rotName = 'rot_180';
+          rotName = 'rot-2';
         break;
         case 3:
-          rotName = 'rot_270';
+          rotName = 'rot-3';
         break;
         default:
-          rotName = 'rot_0';
+          rotName = 'rot-0';
         break;
       }
 
-      classes = 'single_brick ' + 'icon-sprite-' + shapeName + '-' + brickNum + ' ' + rotName;
+      classes = 'single-brick ' + 'icon-sprite-' + shapeName + '-' + brickNum + ' ' + rotName;
       brick.className += classes;
 
 			//brick.setAttribute('style', 'background: ' + color + '; height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');
