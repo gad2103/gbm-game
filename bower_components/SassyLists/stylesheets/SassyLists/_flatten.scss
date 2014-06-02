@@ -1,0 +1,37 @@
+// Turns multidimensional $list into a one-level list
+// -------------------------------------------------------------------------------
+// @documentation http://sassylists.com/documentation.html#flatten
+// -------------------------------------------------------------------------------
+// @alias `unfold()`
+// -------------------------------------------------------------------------------
+// @param $list [List] : list
+// -------------------------------------------------------------------------------
+// @return [List]
+
+@function flatten($list) {
+  $result: ();
+
+  @if length($list) == 1 {
+    @return $list;
+  }
+
+  @each $item in $list {
+    @if length($item) > 1 {
+      $flatten: flatten($item);
+      @each $i in $flatten {
+        $result: append($result, $i, list-separator($list));
+      }
+    }
+
+    @else {
+      $result: append($result, $item, list-separator($list));
+    }
+  }
+
+  @return $result;
+}
+
+// Alias
+@function unfold($list) {
+    @return flatten($list);
+}

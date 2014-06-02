@@ -1,13 +1,17 @@
+/*! SassyLists - v1.0.0 - 2014-01-24 */
 .single-brick {
-  background-color: lightslategray; }
+  background-color: lightslategray;
+  position: absolute;
+  width: 34px;
+  height: 34px; }
 
 .icon-sprite-couch-0 {
   background-image: url("../img/spritesheet.png"); }
   .icon-sprite-couch-0.rot-0 {
-    -webkit-transform: rotate(-90deg) scaleX(-1);
-    -ms-transform: rotate(-90deg) scaleX(-1);
-    transform: rotate(-90deg) scaleX(-1);
-    background-position: -170px 0px; }
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: -272px 0px; }
   .icon-sprite-couch-0.rot-1 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -19,9 +23,78 @@
     transform: rotate(90deg);
     background-position: -170px 0px; }
   .icon-sprite-couch-0.rot-3 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: -272px 0px; }
+
+.icon-sprite-couch-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-couch-1.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: -238px 0px; }
+  .icon-sprite-couch-1.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: -204px 0px; }
+  .icon-sprite-couch-1.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: -204px 0px; }
+  .icon-sprite-couch-1.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: -238px 0px; }
+
+.icon-sprite-couch-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-couch-2.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: -204px 0px; }
+  .icon-sprite-couch-2.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: -238px 0px; }
+  .icon-sprite-couch-2.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: -238px 0px; }
+  .icon-sprite-couch-2.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: -204px 0px; }
+
+.icon-sprite-couch-3 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-couch-3.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: -170px 0px; }
+  .icon-sprite-couch-3.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: -272px 0px; }
+  .icon-sprite-couch-3.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: -272px 0px; }
+  .icon-sprite-couch-3.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
     background-position: -170px 0px; }
 
 .icon-sprite-box-0 {
@@ -47,144 +120,6 @@
     transform: rotate(270deg);
     background-position: -34px 0px; }
 
-.icon-sprite-table-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-table-0.rot-0 {
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    background-position: "" ""; }
-  .icon-sprite-table-0.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-table-0.rot-2 {
-    -webkit-transform: rotate(90deg) scaleX(-1);
-    -ms-transform: rotate(90deg) scaleX(-1);
-    transform: rotate(90deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-table-0.rot-3 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-left-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-0.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-right-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-0.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-left-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-left-0.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-0.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-0.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-0.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-right-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-right-0.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-0.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-0.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-0.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-couch-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-couch-1.rot-0 {
-    -webkit-transform: rotate(-90deg) scaleX(-1);
-    -ms-transform: rotate(-90deg) scaleX(-1);
-    transform: rotate(-90deg) scaleX(-1);
-    background-position: -204px 0px; }
-  .icon-sprite-couch-1.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: -204px 0px; }
-  .icon-sprite-couch-1.rot-2 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: -204px 0px; }
-  .icon-sprite-couch-1.rot-3 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: -204px 0px; }
-
 .icon-sprite-box-1 {
   background-image: url("../img/spritesheet.png"); }
   .icon-sprite-box-1.rot-0 {
@@ -207,144 +142,6 @@
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
     background-position: -34px -34px; }
-
-.icon-sprite-table-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-table-1.rot-0 {
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    background-position: "" ""; }
-  .icon-sprite-table-1.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-table-1.rot-2 {
-    -webkit-transform: rotate(90deg) scaleX(-1);
-    -ms-transform: rotate(90deg) scaleX(-1);
-    transform: rotate(90deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-table-1.rot-3 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-left-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-1.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-right-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-1.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-left-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-left-1.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-1.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-1.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-1.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-right-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-right-1.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-1.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-1.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-1.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-couch-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-couch-2.rot-0 {
-    -webkit-transform: rotate(-90deg) scaleX(-1);
-    -ms-transform: rotate(-90deg) scaleX(-1);
-    transform: rotate(-90deg) scaleX(-1);
-    background-position: -238px 0px; }
-  .icon-sprite-couch-2.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: -238px 0px; }
-  .icon-sprite-couch-2.rot-2 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: -238px 0px; }
-  .icon-sprite-couch-2.rot-3 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: -238px 0px; }
 
 .icon-sprite-box-2 {
   background-image: url("../img/spritesheet.png"); }
@@ -369,144 +166,6 @@
     transform: rotate(270deg);
     background-position: 0px 0px; }
 
-.icon-sprite-table-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-table-2.rot-0 {
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    background-position: "" ""; }
-  .icon-sprite-table-2.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-table-2.rot-2 {
-    -webkit-transform: rotate(90deg) scaleX(-1);
-    -ms-transform: rotate(90deg) scaleX(-1);
-    transform: rotate(90deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-table-2.rot-3 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-left-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-2.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-chair-right-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-2.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-left-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-left-2.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-2.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-2.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-left-2.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-beds-right-2 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-beds-right-2.rot-0 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-2.rot-1 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-2.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
-  .icon-sprite-beds-right-2.rot-3 {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    background-position: "" ""; }
-
-.icon-sprite-couch-3 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-couch-3.rot-0 {
-    -webkit-transform: rotate(-90deg) scaleX(-1);
-    -ms-transform: rotate(-90deg) scaleX(-1);
-    transform: rotate(-90deg) scaleX(-1);
-    background-position: -272px 0px; }
-  .icon-sprite-couch-3.rot-1 {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    background-position: -272px 0px; }
-  .icon-sprite-couch-3.rot-2 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    background-position: -272px 0px; }
-  .icon-sprite-couch-3.rot-3 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: -272px 0px; }
-
 .icon-sprite-box-3 {
   background-image: url("../img/spritesheet.png"); }
   .icon-sprite-box-3.rot-0 {
@@ -530,28 +189,166 @@
     transform: rotate(270deg);
     background-position: 0px -34px; }
 
+.icon-sprite-table-0 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-table-0.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: ""; }
+  .icon-sprite-table-0.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-table-0.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-table-0.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+
+.icon-sprite-table-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-table-1.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: ""; }
+  .icon-sprite-table-1.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-table-1.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-table-1.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+
+.icon-sprite-table-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-table-2.rot-0 {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-position: ""; }
+  .icon-sprite-table-2.rot-1 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-table-2.rot-2 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-table-2.rot-3 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+
 .icon-sprite-table-3 {
   background-image: url("../img/spritesheet.png"); }
   .icon-sprite-table-3.rot-0 {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-3.rot-1 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-3.rot-2 {
-    -webkit-transform: rotate(90deg) scaleX(-1);
-    -ms-transform: rotate(90deg) scaleX(-1);
-    transform: rotate(90deg) scaleX(-1);
-    background-position: "" ""; }
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
   .icon-sprite-table-3.rot-3 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
+
+.icon-sprite-chair-left-0 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-left-0.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-0.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-0.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-0.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-chair-left-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-left-1.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-1.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-1.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-1.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-chair-left-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-left-2.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-2.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-2.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-left-2.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
 
 .icon-sprite-chair-left-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -559,22 +356,91 @@
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-chair-left-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-chair-left-3.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
   .icon-sprite-chair-left-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
+
+.icon-sprite-chair-right-0 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-right-0.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-0.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-0.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-0.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-chair-right-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-right-1.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-1.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-1.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-1.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-chair-right-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-chair-right-2.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-2.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-2.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-chair-right-2.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
 
 .icon-sprite-chair-right-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -582,22 +448,91 @@
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-chair-right-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-chair-right-3.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
   .icon-sprite-chair-right-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
+
+.icon-sprite-beds-left-0 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-left-0.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-0.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-0.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-0.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-beds-left-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-left-1.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-1.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-1.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-1.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-beds-left-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-left-2.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-2.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-2.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-left-2.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
 
 .icon-sprite-beds-left-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -605,22 +540,91 @@
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
+
+.icon-sprite-beds-right-0 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-right-0.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-0.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-0.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-0.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-beds-right-1 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-right-1.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-1.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-1.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-1.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
+
+.icon-sprite-beds-right-2 {
+  background-image: url("../img/spritesheet.png"); }
+  .icon-sprite-beds-right-2.rot-0 {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-2.rot-1 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-2.rot-2 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
+  .icon-sprite-beds-right-2.rot-3 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background-position: ""; }
 
 .icon-sprite-beds-right-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -628,21 +632,21 @@
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-2 {
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    -ms-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-    background-position: "" ""; }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 /*# sourceMappingURL=gbm-tetris.css.map */

@@ -1,0 +1,24 @@
+// Returns a list of values from $lists minus duplicates
+// -------------------------------------------------------------------------------
+// @documentation http://sassylists.com/documentation/#union
+// -------------------------------------------------------------------------------
+// @alias `merge()`
+// -------------------------------------------------------------------------------
+// @dependence `flatten()`
+// @dependence `remove-duplicates()`
+// -------------------------------------------------------------------------------
+// @example union((a b), (b c), (a b c d)) => a b c d
+// -------------------------------------------------------------------------------
+// @param $lists [ArgList] : lists
+// -------------------------------------------------------------------------------
+// @return [List]
+
+@function union($lists...) {
+  $result: remove-duplicates(flatten($lists));
+  @return if(length($result) == 1, nth($result, 1), $result);
+}
+
+// Alias
+@function merge($lists...) {
+  @return union($lists...);
+}

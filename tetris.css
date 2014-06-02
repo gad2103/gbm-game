@@ -35,10 +35,10 @@
 	}
 
 #tetris-wrap {
-	margin: 2em auto 0 auto;
+	/* margin: 2em auto 0 auto; */
 	position: relative;
 	text-align: right;
-	width: 456px;
+	width: 531px;
 }
 
 	#tetris-wrap-inner {
@@ -86,7 +86,7 @@
 #tetris-side {
 	background: #313;
 	color: #FFF;
-	float: right;
+	float: left;
 	text-align: left;
 	width: 187px;
 }

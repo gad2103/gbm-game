@@ -1,0 +1,20 @@
+// Checks whether $list is symmetrical (one-level deep)
+// -------------------------------------------------------------------------------
+// @documentation http://sassylists.com/documentation/#is-symmetrical
+// -------------------------------------------------------------------------------
+// @alias `unfold()`
+// -------------------------------------------------------------------------------
+// @dependence `reverse()`
+// -------------------------------------------------------------------------------
+// @param $list [List] : list
+// -------------------------------------------------------------------------------
+// @return [Boolean]
+
+@function is-symmetrical($list) {
+  @return $list == reverse($list);
+}
+
+// Alias
+@function is-mirror($list) {
+  @return is-symmetrical($list);
+}

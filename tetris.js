@@ -99,7 +99,7 @@ var
 			tetris.intval = setInterval('tetris.timeStep()', 2000 / tetris.level);
 		},
 
-		newBrick: function(isNext, brickNum, color, colorLight, colorDark)
+		newBrick: function(isNext, brickNum)
 		{
 			var brick = document.createElement('div');
 
@@ -152,7 +152,7 @@ var
       brick.className += classes;
 
 			//brick.setAttribute('style', 'background: ' + color + '; height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');
-			brick.setAttribute('style', 'height: ' + tetris.brickSize + 'px; left: 0; top: 0; width: ' + tetris.brickSize + 'px; position: absolute;');
+			brick.setAttribute('style', 'left: 0; top: 0;');
 
 			return brick;
 		},
@@ -190,9 +190,7 @@ var
 
 				for ( var i = 0; i < brickCount; i ++ )
 				{
-					tetris.bricks[i] = tetris.newBrick(
-						false, i, tetris.brickLib[tetris.shapeNum][64], tetris.brickLib[tetris.shapeNum][65], tetris.brickLib[tetris.shapeNum][66]
-						);
+					tetris.bricks[i] = tetris.newBrick(false, i);
 
 					tetris.bricks[i].num = tetris.shapeCount;
 
@@ -240,9 +238,7 @@ var
 				{
 					if ( tetris.brickLib[tetris.shapeNumNext][ver * 4 + hor + tetris.shapeRotNext * 16] )
 					{
-						brick = tetris.newBrick(
-							true, ver, tetris.brickLib[tetris.shapeNumNext][64], tetris.brickLib[tetris.shapeNumNext][65], tetris.brickLib[tetris.shapeNumNext][66]
-							);
+						brick = tetris.newBrick( true, ver);
 
 						brick.style.left = hor * tetris.brickSize + 'px';
 						brick.style.top  = ver * tetris.brickSize + 'px';
