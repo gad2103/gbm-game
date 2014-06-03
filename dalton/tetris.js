@@ -1,3 +1,4 @@
+// TODO disable all other keys when game is paused!
 (function() {
 var tetris = {
 		board:[],
@@ -36,6 +37,7 @@ var tetris = {
 		tempShapes:null,
 		curShape:null,
 		curShapeIndex:null,
+    curShapeRotation:0,
 		curX:0,
 		curY:0,
 		curSqs:[],
@@ -153,26 +155,49 @@ var tetris = {
 		drawNextShape:function() {
 				var ns = [];
 				for (var i=0;i<this.nextShape.length;i++) {
-					ns[i] = this.createSquare(this.nextShape[i][0] + 2,this.nextShape[i][1] + 2,this.nextShapeIndex);
+					ns[i] = this.createSquare(this.nextShape[i][0] + 2,this.nextShape[i][1] + 2,this.nextShapeIndex, i);
 				}
 				this.nextShapeDisplay.innerHTML = '';
 				for (var k=0;k<ns.length;k++) {
 					this.nextShapeDisplay.appendChild(ns[k]);
 				}
 		},
-		drawShape:function(x,y,p) {
+		drawShape:function(x,y,p, isRotated) {
 			for (var i=0;i<p.length;i++) {
 				var newX = p[i][0] + x;
 				var newY = p[i][1] + y;
-				this.curSqs[i] = this.createSquare(newX,newY,this.curShapeIndex);
+				this.curSqs[i] = this.createSquare(newX,newY,this.curShapeIndex,i, isRotated);
 			}
 			for (var k=0;k<this.curSqs.length;k++) {
 				this.canvas.appendChild(this.curSqs[k]);
 			}
 		},
-		createSquare:function(x,y,type) {
+		createSquare:function(x,y,type,index) {
 			var el = document.createElement('div');
-			el.className = 'square type'+type;
+      var pieceName;
+      switch(type){
+        case 0:
+          pieceName = 'table';
+        break;
+        case 1:
+          pieceName = 'couch';
+        case 2:
+          pieceName = 'chair-left';
+        break;
+        case 3:
+          pieceName = 'chair-right';
+        break;
+        case 4:
+          pieceName = 'beds-right';
+        break;
+        case 5:
+          pieceName = 'beds-left';
+        case 6:
+          pieceName = 'box';
+        break;
+      }
+      pieceName = pieceName + '-' + index;
+			el.className = 'square type'+type + ' ' +  pieceName + ' ' + 'rot-' + this.curShapeRotation;
 			el.style.left = x * this.pSize + 'px';
 			el.style.top = y * this.pSize + 'px';
 			return el;
@@ -210,6 +235,7 @@ var tetris = {
 					break;
 				case 38: // rotate
 					this.move('RT');
+          this.curShapeRotation = (this.curShapeRotation + 1)%4;
 					break;
 				case 39:
 					this.move('R');
@@ -346,6 +372,7 @@ var tetris = {
 			}
 		},
 		rotate:function() {
+      console.log(this.curShape + ' rotated');
 			if (this.curShapeIndex !== 6) { // if not the square
 				var temp = [];
 				this.curShape.eachdo(function() {
@@ -354,7 +381,7 @@ var tetris = {
 				if (this.checkMove(this.curX,this.curY,temp)) {
 					this.curShape = temp;
 					this.removeCur();
-					this.drawShape(this.curX,this.curY,this.curShape);
+					this.drawShape(this.curX,this.curY,this.curShape, true);
 				} else { throw new Error("Could not rotate!");}
 			}
 		},
