@@ -90,6 +90,7 @@ var tetris = {
 			this.setInfo('lines');
 		},
 		initShapes:function() {
+      this.curShapeRotation = 0;
 			this.curSqs = [];
 			this.curComplete = false;
 			this.shiftTempShapes();
@@ -155,7 +156,7 @@ var tetris = {
 		drawNextShape:function() {
 				var ns = [];
 				for (var i=0;i<this.nextShape.length;i++) {
-					ns[i] = this.createSquare(this.nextShape[i][0] + 2,this.nextShape[i][1] + 2,this.nextShapeIndex, i);
+					ns[i] = this.createSquare(this.nextShape[i][0] + 2,this.nextShape[i][1] + 2,this.nextShapeIndex, i, false, true);
 				}
 				this.nextShapeDisplay.innerHTML = '';
 				for (var k=0;k<ns.length;k++) {
@@ -166,37 +167,39 @@ var tetris = {
 			for (var i=0;i<p.length;i++) {
 				var newX = p[i][0] + x;
 				var newY = p[i][1] + y;
-				this.curSqs[i] = this.createSquare(newX,newY,this.curShapeIndex,i, isRotated);
+				this.curSqs[i] = this.createSquare(newX,newY,this.curShapeIndex,i, isRotated, false);
 			}
 			for (var k=0;k<this.curSqs.length;k++) {
 				this.canvas.appendChild(this.curSqs[k]);
 			}
 		},
-		createSquare:function(x,y,type,index) {
-			var el = document.createElement('div');
-      var pieceName;
-      switch(type){
-        case 0:
-          pieceName = 'table';
-        break;
-        case 1:
-          pieceName = 'couch';
-        case 2:
-          pieceName = 'chair-left';
-        break;
-        case 3:
-          pieceName = 'chair-right';
-        break;
-        case 4:
-          pieceName = 'beds-right';
-        break;
-        case 5:
-          pieceName = 'beds-left';
-        case 6:
-          pieceName = 'box';
-        break;
-      }
-      pieceName = pieceName + '-' + index;
+		createSquare:function(x,y,type,index, isRotated, isNext) {
+        var el = document.createElement('div');
+        var pieceName;
+        switch(type){
+          case 0:
+            pieceName = 'table';
+          break;
+          case 1:
+            pieceName = 'couch';
+          break;
+          case 2:
+            pieceName = 'chair-left';
+          break;
+          case 3:
+            pieceName = 'chair-right';
+          break;
+          case 4:
+            pieceName = 'beds-right';
+          break;
+          case 5:
+            pieceName = 'beds-left';
+          break;
+          case 6:
+            pieceName = 'box';
+          break;
+        }
+        pieceName = pieceName + '-' + index;
 			el.className = 'square type'+type + ' ' +  pieceName + ' ' + 'rot-' + this.curShapeRotation;
 			el.style.left = x * this.pSize + 'px';
 			el.style.top = y * this.pSize + 'px';
@@ -235,7 +238,7 @@ var tetris = {
 					break;
 				case 38: // rotate
 					this.move('RT');
-          this.curShapeRotation = (this.curShapeRotation + 1)%4;
+          console.log(this.curShapeRotation)
 					break;
 				case 39:
 					this.move('R');
@@ -372,13 +375,13 @@ var tetris = {
 			}
 		},
 		rotate:function() {
-      console.log(this.curShape + ' rotated');
 			if (this.curShapeIndex !== 6) { // if not the square
 				var temp = [];
 				this.curShape.eachdo(function() {
 					temp.push([this[1] * -1,this[0]]); // (-y,x)
 				});
 				if (this.checkMove(this.curX,this.curY,temp)) {
+          this.curShapeRotation = (this.curShapeRotation + 1)%4;
 					this.curShape = temp;
 					this.removeCur();
 					this.drawShape(this.curX,this.curY,this.curShape, true);
