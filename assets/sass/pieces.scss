@@ -1,12 +1,16 @@
-
-
+// some list functions (might not be necessary anymore...)
 @import 'partials/SassyLists';
 
+$dark_gray: #b2b2b2;
+$gbm_red: #d20000;
 
-$brick_bg:lightSlateGray;
+//$brick_bg:lightSlateGray;
 
 // list of items with image backgrounds
-$furniture_items: couch, box, table, chair-left, chair-right, beds-left, beds-right; 
+$furniture_items: box, table, couch, chair-left, chair-right, beds-left, beds-right; 
+
+$couch_radius_first: 6px 0 0 0;
+$couch_radius_last: 0 6px 0 0;
 
 // brick size
 $brick_wh: 34px;
@@ -14,7 +18,55 @@ $brick_wh: 34px;
 $box_bg_positions: 0px 0px, 0px -34px, -34px -34px, -34px 0px;
 $box_bg_position_refs: 1, 4, 2, 3;
 
-$couch_bg_positions_180_deg:  -272px 0px, -238px 0px, -204px 0px, -170px 0px, ;
+// center mixin
+
+@mixin center {
+  margin: 0 auto;
+}
+
+body {overflow:hidden; background: #d7d7d7;}
+#tetris {
+}
+#canvas {
+  width: 340px;
+  height: 680px;
+  background-color: #fff;
+  position: relative;
+  color: #fff;
+  float:left;
+}
+#canvas h1 {margin: 0; padding: 0; text-align: center; font-size: 30px; padding-top: 200px;}
+.piece {
+  border: 1px solid white;
+  position: absolute;
+}
+#next_shape {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid white;
+  width: $brick_wh*6;
+  height: $brick_wh*4;
+  @include center;
+}
+#info {
+  background-color: $gbm_red; 
+  color: #fff; 
+  float: left;
+  height: 660px;
+  padding: 10px;
+  width: 280px;
+  p {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: $dark_gray;
+    text-shadow: 2px 1px 0px #fff, 6px 2px 0px rgba(0,0,0,0.15);
+  }
+}
+
+
 
 @function set_bg_position_initial($piece, $slice) {
 
@@ -25,15 +77,7 @@ $couch_bg_positions_180_deg:  -272px 0px, -238px 0px, -204px 0px, -170px 0px, ;
     $xpos: -$brick_wh*( 5 + $slice ); 
     $ypos:  0px;
   } 
-  @else if $piece == box {
-    @if $slice < 2 {
-      $xpos: -$brick_wh*($slice);
-      $ypos: 0px;
-    } @else {
-      $xpos: -$brick_wh*( $slice - 2 );
-      $ypos: -$brick_wh;
-    } 
-  }
+
 
   @return $xpos $ypos;
 
@@ -43,45 +87,36 @@ $couch_bg_positions_180_deg:  -272px 0px, -238px 0px, -204px 0px, -170px 0px, ;
 
   @if $piece == couch {
 
-    @if ( $rotation == 3  or $rotation == 0 ) {
-
-      @return nth($shifted_bg_list, $slice + 1);
-    
-    } @else {
-
-      @return $bg_coords;
-
-    }
+    @return $bg_coords;
 
   } @else if $piece == box {
 
-      @return nth($shifted_bg_list, $rotation + 1);
+    @return nth($shifted_bg_list, $rotation + 1);
   }
-  @return "";
+  @return $bg_coords;
 }
 
 @function set_transform_val($piece, $rotation){
 
   $transform_val:'';
-  @if $piece == couch or $piece == table { 
-    $transform_val: rotate( 90deg*($rotation - 1) ); 
+  @if $piece == table { 
+    $transform_val: rotate( (90deg*($rotation + 2))%360 ); 
   }
   @else { $transform_val: rotate( 90deg*($rotation) ); }
-  //@if ( $rotation == 2 and not ( $piece == couch or $piece == box ) ) or ( ($rotation == 3 and $piece == couch) or ($rotation == 0 and $piece == couch) ) { $transform_val: $transform_val + ' ' + scaleX(-1); }
 
   @return $transform_val;
 
 }
 
-.single-brick {
-  background-color: $brick_bg;
+.square {
+  //background-color: $brick_bg;
   position: absolute;
   width: $brick_wh;
   height: $brick_wh;
 }
 
 @each $item in $furniture_items {
-  
+
   @for $slice from 0 through 3 {
 
     $tmp_list:();
@@ -92,28 +127,22 @@ $couch_bg_positions_180_deg:  -272px 0px, -238px 0px, -204px 0px, -170px 0px, ;
 
       background-image: url('../img/spritesheet.png');
 
-      $bg_pos: set_bg_position_initial($item, $slice);
+      @if ($slice == 0 and $item == couch) { border-radius: $couch_radius_first;}
+      @if ($slice == 3 and $item == couch) { border-radius: $couch_radius_last;}
 
-      //.debug-#{$i}{ background: $tmp_list;}
+      $bg_pos: set_bg_position_initial($item, $slice);
 
       @if ( $item == box ) {
         $shape_positions: $box_bg_positions;
         $shape_ref_array: $box_bg_position_refs;
-     }
+      }
 
-     $tmp_list: join(slice($shape_positions, nth($shape_ref_array, $slice + 1)), slice($shape_positions, 1, nth($shape_ref_array, $slice+ 1)));
-
-     @if ( $item == couch ) {
-      $tmp_list: $couch_bg_positions_180_deg; 
-     }
-
-     //.debug-#{$item}-#{$slice} { background: $tmp_list;}
+      $tmp_list: join(slice($shape_positions, nth($shape_ref_array, $slice + 1)), slice($shape_positions, 1, nth($shape_ref_array, $slice+ 1)));
 
       @for $rotation from 0 through 3{
         &.rot-#{$rotation}{
-          //$bg_pos_val: nth($tmp_list, $j + 1);
           transform: set_transform_val($item, $rotation);
-          background-position: set_bg_pos_rotate($item, $slice, $rotation, $bg_pos, $tmp_list); //$xpos $ypos;
+          background-position: set_bg_pos_rotate($item, $slice, $rotation, $bg_pos, $tmp_list); 
         }
       }
     }
