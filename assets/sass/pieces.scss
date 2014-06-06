@@ -7,10 +7,13 @@ $gbm_red: #d20000;
 //$brick_bg:lightSlateGray;
 
 // list of items with image backgrounds
-$furniture_items: box, table, couch, chair-left, chair-right, beds-left, beds-right; 
+$furniture_items: box, table, couch, bed-left, bed-right, beds-left, beds-right; 
 
 $couch_radius_first: 6px 0 0 0;
 $couch_radius_last: 0 6px 0 0;
+$beds_radius_headboard: 5px 5px 0 0;
+$beds_radius_foot: 0 5px 0 0;
+$beds_radius_foot_left: 5px 0 0 0;
 
 // brick size
 $brick_wh: 34px;
@@ -22,6 +25,20 @@ $box_bg_position_refs: 1, 4, 2, 3;
 
 @mixin center {
   margin: 0 auto;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#tetris {
+  @include clearfix;
+  transform: rotate(-90deg);
+  max-width: 670px;
 }
 
 body {overflow:hidden; background: #d7d7d7;}
@@ -54,33 +71,59 @@ body {overflow:hidden; background: #d7d7d7;}
   float: left;
   height: 660px;
   padding: 10px;
-  width: 280px;
-  p {
+  width: 205px;
+  #stats p {
+    position: relative;
+    transform: rotate(90deg);
     text-align: center;
     margin: 20px 0;
-    font-size: 36px;
+    font-size: 26px;
     text-transform: uppercase;
     font-family: sans-serif;
     color: $dark_gray;
     text-shadow: 2px 1px 0px #fff, 6px 2px 0px rgba(0,0,0,0.15);
   }
 }
+p#level {
+  left: 60px;
+  top: 39px; }
 
+p#lines {
+  left: 20px;
+  top: -13px; }
+
+p#score {
+  left: -20px;
+  top: -48px; }
+
+p#time {
+  left: -60px;
+  top: -114px; }
 
 
 @function set_bg_position_initial($piece, $slice) {
 
-  $xpos:'';
-  $ypos:'';
+  $xy_pos:'';
 
   @if $piece == couch {
-    $xpos: -$brick_wh*( 5 + $slice ); 
-    $ypos:  0px;
+    $xy_pos: -$brick_wh*( 8 + $slice ) 0px; 
+  }
+  @else if $piece == bed-left or $piece == bed-right {
+    @if $slice == 0 {
+      @if $piece == bed-left {
+        $xy_pos: -$brick_wh*4 0px;
+      } @else {
+        $xy_pos: -$brick_wh*5 0px;
+      } 
+    }@else{
+      @if $piece == bed-left {
+        $xy_pos: -$brick_wh*(1 + $slice)  -34px;
+      } @else {
+        $xy_pos: -$brick_wh*(4 + $slice)   -34px;
+      }
+    }
   } 
-
-
-  @return $xpos $ypos;
-
+  @return $xy_pos;
 }
 
 @function set_bg_pos_rotate($piece, $slice, $rotation, $bg_coords, $shifted_bg_list) {
@@ -129,6 +172,10 @@ body {overflow:hidden; background: #d7d7d7;}
 
       @if ($slice == 0 and $item == couch) { border-radius: $couch_radius_first;}
       @if ($slice == 3 and $item == couch) { border-radius: $couch_radius_last;}
+      @if ($slice == 0 and ($item == bed-left or $item == bed-right) ) { border-radius: $beds_radius_headboard;}
+      @if ($slice == 3 and $item == bed-right ) { border-radius: $beds_radius_foot;}
+      @if ($slice == 1 and $item == bed-left) { border-radius: $beds_radius_foot_left;}
+
 
       $bg_pos: set_bg_position_initial($item, $slice);
 

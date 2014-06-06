@@ -184,10 +184,10 @@ var tetris = {
             pieceName = 'couch';
           break;
           case 2:
-            pieceName = 'chair-left';
+            pieceName = 'bed-right';
           break;
           case 3:
-            pieceName = 'chair-right';
+            pieceName = 'bed-left';
           break;
           case 4:
             pieceName = 'beds-right';

@@ -5,9 +5,21 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
-.icon-sprite-blue-sofa {
+.icon-sprite-bed-left {
+  background-image: url(../img/spritesheet.png);
+  background-position: -68px 0px;
+  width: 102px;
+  height: 68px;
+}
+.icon-sprite-bed-right {
   background-image: url(../img/spritesheet.png);
   background-position: -170px 0px;
+  width: 102px;
+  height: 68px;
+}
+.icon-sprite-blue-sofa {
+  background-image: url(../img/spritesheet.png);
+  background-position: -272px 0px;
   width: 136px;
   height: 34px;
 }
@@ -15,11 +27,5 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-image: url(../img/spritesheet.png);
   background-position: 0px 0px;
   width: 68px;
-  height: 68px;
-}
-.icon-sprite-table {
-  background-image: url(../img/spritesheet.png);
-  background-position: -68px 0px;
-  width: 102px;
   height: 68px;
 }

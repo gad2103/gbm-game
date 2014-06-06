@@ -1,4 +1,14 @@
 /*! SassyLists - v1.0.0 - 2014-01-24 */
+#tetris {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  max-width: 670px; }
+  #tetris:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 body {
   overflow: hidden;
   background: #d7d7d7; }
@@ -36,15 +46,35 @@ body {
   float: left;
   height: 660px;
   padding: 10px;
-  width: 280px; }
-  #info p {
+  width: 205px; }
+  #info #stats p {
+    position: relative;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
     text-align: center;
     margin: 20px 0;
-    font-size: 36px;
+    font-size: 26px;
     text-transform: uppercase;
     font-family: sans-serif;
     color: #b2b2b2;
     text-shadow: 2px 1px 0px white, 6px 2px 0px rgba(0, 0, 0, 0.15); }
+
+p#level {
+  left: 60px;
+  top: 39px; }
+
+p#lines {
+  left: 20px;
+  top: -13px; }
+
+p#score {
+  left: -20px;
+  top: -48px; }
+
+p#time {
+  left: -60px;
+  top: -114px; }
 
 .square {
   position: absolute;
@@ -149,22 +179,22 @@ body {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-0.rot-1 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-0.rot-2 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-0.rot-3 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-table-1 {
   background-image: url("../img/spritesheet.png"); }
@@ -172,22 +202,22 @@ body {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-1.rot-1 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-1.rot-2 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-1.rot-3 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-table-2 {
   background-image: url("../img/spritesheet.png"); }
@@ -195,22 +225,22 @@ body {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-2.rot-1 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-2.rot-2 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-2.rot-3 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-table-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -218,22 +248,22 @@ body {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-3.rot-1 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-3.rot-2 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-table-3.rot-3 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-couch-0 {
   background-image: url("../img/spritesheet.png");
@@ -242,22 +272,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: -170px 0px; }
+    background-position: -272px 0px; }
   .icon-sprite-couch-0.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: -170px 0px; }
+    background-position: -272px 0px; }
   .icon-sprite-couch-0.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: -170px 0px; }
+    background-position: -272px 0px; }
   .icon-sprite-couch-0.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: -170px 0px; }
+    background-position: -272px 0px; }
 
 .icon-sprite-couch-1 {
   background-image: url("../img/spritesheet.png"); }
@@ -265,22 +295,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: -204px 0px; }
+    background-position: -306px 0px; }
   .icon-sprite-couch-1.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: -204px 0px; }
+    background-position: -306px 0px; }
   .icon-sprite-couch-1.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: -204px 0px; }
+    background-position: -306px 0px; }
   .icon-sprite-couch-1.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: -204px 0px; }
+    background-position: -306px 0px; }
 
 .icon-sprite-couch-2 {
   background-image: url("../img/spritesheet.png"); }
@@ -288,22 +318,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: -238px 0px; }
+    background-position: -340px 0px; }
   .icon-sprite-couch-2.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: -238px 0px; }
+    background-position: -340px 0px; }
   .icon-sprite-couch-2.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: -238px 0px; }
+    background-position: -340px 0px; }
   .icon-sprite-couch-2.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: -238px 0px; }
+    background-position: -340px 0px; }
 
 .icon-sprite-couch-3 {
   background-image: url("../img/spritesheet.png");
@@ -312,206 +342,210 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: -272px 0px; }
+    background-position: -374px 0px; }
   .icon-sprite-couch-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: -272px 0px; }
+    background-position: -374px 0px; }
   .icon-sprite-couch-3.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: -272px 0px; }
+    background-position: -374px 0px; }
   .icon-sprite-couch-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: -272px 0px; }
+    background-position: -374px 0px; }
 
-.icon-sprite-chair-left-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-0.rot-0 {
+.icon-sprite-bed-left-0 {
+  background-image: url("../img/spritesheet.png");
+  border-radius: 5px 5px 0 0; }
+  .icon-sprite-bed-left-0.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-1 {
+    background-position: -136px 0px; }
+  .icon-sprite-bed-left-0.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-2 {
+    background-position: -136px 0px; }
+  .icon-sprite-bed-left-0.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-0.rot-3 {
+    background-position: -136px 0px; }
+  .icon-sprite-bed-left-0.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -136px 0px; }
 
-.icon-sprite-chair-left-1 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-1.rot-0 {
+.icon-sprite-bed-left-1 {
+  background-image: url("../img/spritesheet.png");
+  border-radius: 5px 0 0 0; }
+  .icon-sprite-bed-left-1.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-1 {
+    background-position: -68px -34px; }
+  .icon-sprite-bed-left-1.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-2 {
+    background-position: -68px -34px; }
+  .icon-sprite-bed-left-1.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-1.rot-3 {
+    background-position: -68px -34px; }
+  .icon-sprite-bed-left-1.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -68px -34px; }
 
-.icon-sprite-chair-left-2 {
+.icon-sprite-bed-left-2 {
   background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-2.rot-0 {
+  .icon-sprite-bed-left-2.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-1 {
+    background-position: -102px -34px; }
+  .icon-sprite-bed-left-2.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-2 {
+    background-position: -102px -34px; }
+  .icon-sprite-bed-left-2.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-2.rot-3 {
+    background-position: -102px -34px; }
+  .icon-sprite-bed-left-2.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -102px -34px; }
 
-.icon-sprite-chair-left-3 {
+.icon-sprite-bed-left-3 {
   background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-left-3.rot-0 {
+  .icon-sprite-bed-left-3.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-3.rot-1 {
+    background-position: -136px -34px; }
+  .icon-sprite-bed-left-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-3.rot-2 {
+    background-position: -136px -34px; }
+  .icon-sprite-bed-left-3.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-left-3.rot-3 {
+    background-position: -136px -34px; }
+  .icon-sprite-bed-left-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -136px -34px; }
 
-.icon-sprite-chair-right-0 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-0.rot-0 {
+.icon-sprite-bed-right-0 {
+  background-image: url("../img/spritesheet.png");
+  border-radius: 5px 5px 0 0; }
+  .icon-sprite-bed-right-0.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-1 {
+    background-position: -170px 0px; }
+  .icon-sprite-bed-right-0.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-2 {
+    background-position: -170px 0px; }
+  .icon-sprite-bed-right-0.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-0.rot-3 {
+    background-position: -170px 0px; }
+  .icon-sprite-bed-right-0.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -170px 0px; }
 
-.icon-sprite-chair-right-1 {
+.icon-sprite-bed-right-1 {
   background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-1.rot-0 {
+  .icon-sprite-bed-right-1.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-1 {
+    background-position: -170px -34px; }
+  .icon-sprite-bed-right-1.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-2 {
+    background-position: -170px -34px; }
+  .icon-sprite-bed-right-1.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-1.rot-3 {
+    background-position: -170px -34px; }
+  .icon-sprite-bed-right-1.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -170px -34px; }
 
-.icon-sprite-chair-right-2 {
+.icon-sprite-bed-right-2 {
   background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-2.rot-0 {
+  .icon-sprite-bed-right-2.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-1 {
+    background-position: -204px -34px; }
+  .icon-sprite-bed-right-2.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-2 {
+    background-position: -204px -34px; }
+  .icon-sprite-bed-right-2.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-2.rot-3 {
+    background-position: -204px -34px; }
+  .icon-sprite-bed-right-2.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -204px -34px; }
 
-.icon-sprite-chair-right-3 {
-  background-image: url("../img/spritesheet.png"); }
-  .icon-sprite-chair-right-3.rot-0 {
+.icon-sprite-bed-right-3 {
+  background-image: url("../img/spritesheet.png");
+  border-radius: 0 5px 0 0; }
+  .icon-sprite-bed-right-3.rot-0 {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-3.rot-1 {
+    background-position: -238px -34px; }
+  .icon-sprite-bed-right-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-3.rot-2 {
+    background-position: -238px -34px; }
+  .icon-sprite-bed-right-3.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
-  .icon-sprite-chair-right-3.rot-3 {
+    background-position: -238px -34px; }
+  .icon-sprite-bed-right-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: -238px -34px; }
 
 .icon-sprite-beds-left-0 {
   background-image: url("../img/spritesheet.png"); }
@@ -519,22 +553,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-0.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-0.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-0.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-left-1 {
   background-image: url("../img/spritesheet.png"); }
@@ -542,22 +576,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-1.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-1.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-1.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-left-2 {
   background-image: url("../img/spritesheet.png"); }
@@ -565,22 +599,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-2.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-2.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-2.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-left-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -588,22 +622,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-left-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-right-0 {
   background-image: url("../img/spritesheet.png"); }
@@ -611,22 +645,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-0.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-0.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-0.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-right-1 {
   background-image: url("../img/spritesheet.png"); }
@@ -634,22 +668,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-1.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-1.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-1.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-right-2 {
   background-image: url("../img/spritesheet.png"); }
@@ -657,22 +691,22 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-2.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-2.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-2.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 .icon-sprite-beds-right-3 {
   background-image: url("../img/spritesheet.png"); }
@@ -680,21 +714,21 @@ body {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-1 {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-2 {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    background-position: "" ""; }
+    background-position: ""; }
   .icon-sprite-beds-right-3.rot-3 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
-    background-position: "" ""; }
+    background-position: ""; }
 
 /*# sourceMappingURL=gbm-tetris.css.map */
