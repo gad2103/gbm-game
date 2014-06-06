@@ -18,6 +18,8 @@ $beds_radius_foot_left: 5px 0 0 0;
 // brick size
 $brick_wh: 34px;
 
+$namespace: 'tetris';
+
 $box_bg_positions: 0px 0px, 0px -34px, -34px -34px, -34px 0px;
 $box_bg_position_refs: 1, 4, 2, 3;
 
@@ -34,17 +36,19 @@ $box_bg_position_refs: 1, 4, 2, 3;
     clear: both;
   }
 }
+@mixin rounded_inner {
+  border-radius: 5px;
+}
 
 #tetris {
   @include clearfix;
   transform: rotate(-90deg);
-  max-width: 670px;
+  max-width: 565px; 
+  margin-left: 80px;
+  position: relative;
+  top: -48px;
 }
-
-body {overflow:hidden; background: #d7d7d7;}
-#tetris {
-}
-#canvas {
+##{$namespace}-canvas {
   width: 340px;
   height: 680px;
   background-color: #fff;
@@ -52,27 +56,28 @@ body {overflow:hidden; background: #d7d7d7;}
   color: #fff;
   float:left;
 }
-#canvas h1 {margin: 0; padding: 0; text-align: center; font-size: 30px; padding-top: 200px;}
+##{$namespace}-canvas h1 {margin: 0; padding: 0; text-align: center; font-size: 30px; padding-top: 200px;}
 .piece {
   border: 1px solid white;
   position: absolute;
 }
-#next_shape {
+##{$namespace}-next_shape {
   position: relative;
   background-color: #fff;
   border: 1px solid white;
   width: $brick_wh*6;
   height: $brick_wh*4;
   @include center;
+  @include rounded_inner;
 }
-#info {
+##{$namespace}-info {
   background-color: $gbm_red; 
   color: #fff; 
   float: left;
   height: 660px;
   padding: 10px;
   width: 205px;
-  #stats p {
+  ##{$namespace}-stats p {
     position: relative;
     transform: rotate(90deg);
     text-align: center;
@@ -83,23 +88,36 @@ body {overflow:hidden; background: #d7d7d7;}
     color: $dark_gray;
     text-shadow: 2px 1px 0px #fff, 6px 2px 0px rgba(0,0,0,0.15);
   }
+  ##{$namespace}-messages {
+    transform: rotate(90deg);
+    margin-top: 74px;
+    position: relative;
+    right: 56px;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 9px;
+    background: white;
+    color: #4d4d4d;
+    width: 300px;
+    height: 160px;
+    @include rounded_inner;
+  }
 }
-p#level {
+p##{$namespace}-level {
   left: 60px;
-  top: 39px; }
+  top: 60px; }
 
-p#lines {
+p##{$namespace}-lines {
   left: 20px;
-  top: -13px; }
+  top: 6px; }
 
-p#score {
+p##{$namespace}-score {
   left: -20px;
-  top: -48px; }
+  top: -36px; }
 
-p#time {
+p##{$namespace}-time {
   left: -60px;
-  top: -114px; }
-
+  top: -95px; }
 
 @function set_bg_position_initial($piece, $slice) {
 
@@ -151,7 +169,7 @@ p#time {
 
 }
 
-.square {
+.#{$namespace}-square {
   //background-color: $brick_bg;
   position: absolute;
   width: $brick_wh;

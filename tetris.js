@@ -61,7 +61,8 @@ var tetris = {
 		lines:0,
     
 		init:function() {
-			this.canvas = document.getElementById("canvas");
+			this.canvas = document.getElementById("tetris-canvas");
+			this.messages = document.getElementById("tetris-messages");
 			this.initBoard();
 			this.initInfo();
 			this.initLevelScores();
@@ -79,11 +80,11 @@ var tetris = {
 			//this.boardDiv = document.getElementById('board'); // for debugging
 		},
 		initInfo:function() {
-			this.nextShapeDisplay = document.getElementById("next_shape");
-			this.levelDisplay = document.getElementById("level").getElementsByTagName("span")[0];
-			this.timeDisplay = document.getElementById("time").getElementsByTagName("span")[0];
-			this.scoreDisplay = document.getElementById("score").getElementsByTagName("span")[0];
-			this.linesDisplay = document.getElementById("lines").getElementsByTagName("span")[0];
+			this.nextShapeDisplay = document.getElementById("tetris-next_shape");
+			this.levelDisplay = document.getElementById("tetris-level").getElementsByTagName("span")[0];
+			this.timeDisplay = document.getElementById("tetris-time").getElementsByTagName("span")[0];
+			this.scoreDisplay = document.getElementById("tetris-score").getElementsByTagName("span")[0];
+			this.linesDisplay = document.getElementById("tetris-lines").getElementsByTagName("span")[0];
 			this.setInfo('time');
 			this.setInfo('score');
 			this.setInfo('level');
@@ -146,7 +147,7 @@ var tetris = {
 		initLevelScores:function() {
 			var c = 1;
 			for (var i=1;i<=this.numLevels;i++) {
-				this['level' + i] = [c * 1000,40*i,5*i]; // for next level, row score, p score, TODO: speed
+				this['level' + i] = [c * 100,40*i,5*i]; // for next level, row score, p score, TODO: speed
 				c = c + c;
 			}
 		},
@@ -200,7 +201,7 @@ var tetris = {
           break;
         }
         pieceName = pieceName + '-' + index;
-			el.className = 'square type'+type + ' ' +  'icon-sprite-' + pieceName + ' ' + 'rot-' + this.curShapeRotation;
+			el.className = 'tetris-square type'+type + ' ' +  'icon-sprite-' + pieceName + ' ' + 'rot-' + this.curShapeRotation;
 			el.style.left = x * this.pSize + 'px';
 			el.style.top = y * this.pSize + 'px';
 			return el;
@@ -297,7 +298,7 @@ var tetris = {
 		},
 		gameOver:function() {
 			this.clearTimers();
-			this.canvas.innerHTML = "<h1>GAME OVER</h1>";
+			this.messages.innerHTML = "<h1>GAME OVER</h1><p>looks like you need to hire a professional!</p><a href='#home'>Call us now!</a>";
 		},
 		play:function() { //gameLoop
 			var me = this;

@@ -3,17 +3,16 @@
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  max-width: 670px; }
+  max-width: 565px;
+  margin-left: 80px;
+  position: relative;
+  top: -48px; }
   #tetris:after {
     content: "";
     display: table;
     clear: both; }
 
-body {
-  overflow: hidden;
-  background: #d7d7d7; }
-
-#canvas {
+#tetris-canvas {
   width: 340px;
   height: 680px;
   background-color: #fff;
@@ -21,7 +20,7 @@ body {
   color: #fff;
   float: left; }
 
-#canvas h1 {
+#tetris-canvas h1 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -32,22 +31,23 @@ body {
   border: 1px solid white;
   position: absolute; }
 
-#next_shape {
+#tetris-next_shape {
   position: relative;
   background-color: #fff;
   border: 1px solid white;
   width: 204px;
   height: 136px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 5px; }
 
-#info {
+#tetris-info {
   background-color: #d20000;
   color: #fff;
   float: left;
   height: 660px;
   padding: 10px;
   width: 205px; }
-  #info #stats p {
+  #tetris-info #tetris-stats p {
     position: relative;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -59,24 +59,39 @@ body {
     font-family: sans-serif;
     color: #b2b2b2;
     text-shadow: 2px 1px 0px white, 6px 2px 0px rgba(0, 0, 0, 0.15); }
+  #tetris-info #tetris-messages {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-top: 74px;
+    position: relative;
+    right: 56px;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 9px;
+    background: white;
+    color: #4d4d4d;
+    width: 300px;
+    height: 160px;
+    border-radius: 5px; }
 
-p#level {
+p#tetris-level {
   left: 60px;
-  top: 39px; }
+  top: 60px; }
 
-p#lines {
+p#tetris-lines {
   left: 20px;
-  top: -13px; }
+  top: 6px; }
 
-p#score {
+p#tetris-score {
   left: -20px;
-  top: -48px; }
+  top: -36px; }
 
-p#time {
+p#tetris-time {
   left: -60px;
-  top: -114px; }
+  top: -95px; }
 
-.square {
+.tetris-square {
   position: absolute;
   width: 34px;
   height: 34px; }
