@@ -147,7 +147,7 @@ var tetris = {
 		initLevelScores:function() {
 			var c = 1;
 			for (var i=1;i<=this.numLevels;i++) {
-				this['level' + i] = [c * 100,40*i,5*i]; // for next level, row score, p score, TODO: speed
+				this['level' + i] = [c * 200,40*i,5*i]; // for next level, row score, p score, TODO: speed
 				c = c + c;
 			}
 		},
