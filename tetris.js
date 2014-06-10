@@ -77,7 +77,7 @@ var tetris = {
 			for (var i=0;i<s;i++) {
 				this.board.push(0);
 			}
-			//this.boardDiv = document.getElementById('board'); // for debugging
+			//this.boardDiv = document.getElementById('boardclass="truck" '); // for debugging
 		},
 		initInfo:function() {
 			this.nextShapeDisplay = document.getElementById("tetris-next_shape");
@@ -176,7 +176,7 @@ var tetris = {
 		},
 		createSquare:function(x,y,type,index, isRotated, isNext) {
         var el = document.createElement('div');
-        var pieceName;
+        var pieceName, boxMover;
         switch(type){
           case 0:
             pieceName = 'table';
@@ -200,11 +200,20 @@ var tetris = {
             pieceName = 'box';
           break;
         }
+        if ( (pieceName !== 'beds-left' && pieceName !== 'table') && index === 0 ) {
+          boxMover = 'box-mover';
+        } else if (pieceName == 'beds-left' && index === 1) {
+          boxMover = 'box-mover';
+        } else if (pieceName == 'table' && index === 3) {
+          boxMover = 'box-mover table';
+        } else {
+          boxMover = '';
+        }
         pieceName = pieceName + '-' + index;
-			el.className = 'tetris-square type'+type + ' ' +  'icon-sprite-' + pieceName + ' ' + 'rot-' + this.curShapeRotation;
-			el.style.left = x * this.pSize + 'px';
-			el.style.top = y * this.pSize + 'px';
-			return el;
+        el.className = 'tetris-square ' +  'icon-sprite-' + pieceName + ' ' + 'rot-' + this.curShapeRotation + ' ' +  boxMover;
+        el.style.left = x * this.pSize + 'px';
+        el.style.top = y * this.pSize + 'px';
+        return el;
 		},
 		removeCur:function() {
 			var me = this;
@@ -239,7 +248,7 @@ var tetris = {
 					break;
 				case 38: // rotate
 					this.move('RT');
-          console.log(this.curShapeRotation)
+          //console.log(this.curShapeRotation)
 					break;
 				case 39:
 					this.move('R');
@@ -298,8 +307,12 @@ var tetris = {
 		},
 		gameOver:function() {
 			this.clearTimers();
-			this.messages.innerHTML = "<h1>GAME OVER</h1><p>looks like you need to hire a professional!</p><a href='#home'>Call us now!</a>";
+			this.messages.innerHTML = "<h1>GAME OVER</h1><p>looks like you need to hire a professional!</p><a href='#home'>Call us now!</a><p> -- or -- </p><a href='#quote'>get a quote</a>";
+      this.messages.style.display = 'block';
 		},
+    destroy:function(){
+      this.clearTimers();
+    },
 		play:function() { //gameLoop
 			var me = this;
 			if (this.timer === null) {
@@ -312,6 +325,7 @@ var tetris = {
 					me.curSqs.eachdo(function() {
 						me.sqs.push(this);
 					});
+          $('.box-mover').removeClass('box-mover');
 					me.calcScore({shape:true});
 					me.checkRows();
 					me.checkScore();
@@ -444,7 +458,7 @@ var tetris = {
 				console.log(n);
 				if (n < start) {start = n;}
 			});
-			console.log(start);
+			//console.log(start);
 
 			
 
@@ -569,6 +583,7 @@ var tetris = {
 		},*/
 };
 tetris.init();
+return window.tetris = tetris;
 })();
 
 if (!Array.prototype.eachdo) {

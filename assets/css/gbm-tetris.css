@@ -1,4 +1,32 @@
 /*! SassyLists - v1.0.0 - 2014-01-24 */
+.box-mover:before {
+  position: absolute;
+  content: '';
+  width: 44px;
+  height: 54px;
+  top: -41px;
+  right: -10px;
+  background: url("../../../images/worker-top2.png") no-repeat center center;
+  -webkit-background-size: 40px 51px;
+  background-size: 40px 51px; }
+
+.box-mover.table:before {
+  width: 0px;
+  height: 0px; }
+.box-mover.table:after {
+  position: absolute;
+  content: '';
+  width: 44px;
+  height: 54px;
+  top: 22px;
+  right: -5px;
+  background: url("../../../images/worker-top2.png") no-repeat center center;
+  -webkit-background-size: 40px 51px;
+  background-size: 40px 51px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
 #tetris {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -18,7 +46,8 @@
   background-color: #fff;
   position: relative;
   color: #fff;
-  float: left; }
+  float: left;
+  overflow: hidden; }
 
 #tetris-canvas h1 {
   margin: 0;
@@ -73,7 +102,13 @@
     color: #4d4d4d;
     width: 300px;
     height: 160px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    display: none; }
+    #tetris-info #tetris-messages p, #tetris-info #tetris-messages h1, #tetris-info #tetris-messages a {
+      margin: 10px 0; }
+    #tetris-info #tetris-messages a {
+      text-transform: capitalize;
+      color: #d20000; }
 
 p#tetris-level {
   left: 60px;

@@ -36,9 +36,45 @@ $box_bg_position_refs: 1, 4, 2, 3;
     clear: both;
   }
 }
+@mixin make_box($grow) {
+  width: $brick_wh + $grow;
+  height: $brick_wh + $grow + 10;
+}
 @mixin rounded_inner {
   border-radius: 5px;
 }
+
+@mixin box_mover($grow_offset,  $where: 'before') {
+
+  $top:'';
+  $right:'';
+  $bg_size_x: $brick_wh + 6;
+  $bg_size_y: $brick_wh + 17;
+  @if ( $where == 'before') { $top: -$brick_wh - 7; $right: -$grow_offset + px; }
+  @else { $top: $brick_wh - 12; $right: -5px; }
+  &:#{$where} {
+    position:absolute;
+    content:'';
+    @include make_box($grow_offset);
+    top: $top; 
+    right: $right; 
+    background:url('../../../images/worker-top2.png') no-repeat center center;
+    background-size: $bg_size_x $bg_size_y;
+    @if ( $where == 'after' ) { transform: rotate(180deg); }
+  }
+}
+
+.box-mover{
+  @include box_mover(10);
+}
+.box-mover.table {
+  &:before{
+    width:0px;
+    height:0px;
+  }
+  @include box_mover(10, 'after');
+}
+
 
 #tetris {
   @include clearfix;
@@ -55,6 +91,7 @@ $box_bg_position_refs: 1, 4, 2, 3;
   position: relative;
   color: #fff;
   float:left;
+  overflow: hidden;
 }
 ##{$namespace}-canvas h1 {margin: 0; padding: 0; text-align: center; font-size: 30px; padding-top: 200px;}
 .piece {
@@ -101,6 +138,14 @@ $box_bg_position_refs: 1, 4, 2, 3;
     width: 300px;
     height: 160px;
     @include rounded_inner;
+    display:none;
+    & p, h1, a {
+      margin: 10px 0;
+    }
+    & a {
+      text-transform: capitalize;
+      color: #d20000;
+    }
   }
 }
 p##{$namespace}-level {
@@ -185,6 +230,7 @@ p##{$namespace}-time {
     $shape_ref_array:(1,2,3,4);
 
     .icon-sprite-#{$item}-#{$slice}{
+
 
       background-image: url('../img/spritesheet.png');
 
