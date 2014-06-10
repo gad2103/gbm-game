@@ -102,13 +102,26 @@
     color: #4d4d4d;
     width: 300px;
     height: 160px;
-    border-radius: 5px;
-    display: none; }
+    border-radius: 5px; }
     #tetris-info #tetris-messages p, #tetris-info #tetris-messages h1, #tetris-info #tetris-messages a {
       margin: 10px 0; }
     #tetris-info #tetris-messages a {
       text-transform: capitalize;
       color: #d20000; }
+    #tetris-info #tetris-messages ul li {
+      display: inline-block;
+      padding: 12px; }
+      #tetris-info #tetris-messages ul li.down:before {
+        content: '\2190';
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      #tetris-info #tetris-messages ul li.right:before {
+        content: '\2193'; }
+      #tetris-info #tetris-messages ul li.up:before {
+        content: '\2192'; }
+      #tetris-info #tetris-messages ul li.rotate:before {
+        content: '\2191'; }
 
 p#tetris-level {
   left: 60px;

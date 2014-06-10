@@ -63,6 +63,7 @@ var tetris = {
 		init:function() {
 			this.canvas = document.getElementById("tetris-canvas");
 			this.messages = document.getElementById("tetris-messages");
+      this.messages.innerHTML = '<h1>PACK THE TRUCK</h1><p>try your hand at packing the track, use the arrow keys:</p><ul id="tetris-message-list"><li class="rotate">rotate</li><li class="up">up</li><li class="down">down</li><li class="right">right</li></ul>';
 			this.initBoard();
 			this.initInfo();
 			this.initLevelScores();

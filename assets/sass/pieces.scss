@@ -138,7 +138,6 @@ $box_bg_position_refs: 1, 4, 2, 3;
     width: 300px;
     height: 160px;
     @include rounded_inner;
-    display:none;
     & p, h1, a {
       margin: 10px 0;
     }
@@ -146,6 +145,23 @@ $box_bg_position_refs: 1, 4, 2, 3;
       text-transform: capitalize;
       color: #d20000;
     }
+    & ul li {
+      display:inline-block;
+      padding:12px;
+      &.down:before{
+        content: '\2190';
+        transform: rotate(90deg);
+      }
+      &.right:before{
+        content: '\2193';
+      }
+      &.up:before{
+        content: '\2192';
+      }
+      &.rotate:before{
+        content: '\2191';
+      }
+    } 
   }
 }
 p##{$namespace}-level {
