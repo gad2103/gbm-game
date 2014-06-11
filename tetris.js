@@ -308,7 +308,7 @@ var tetris = {
 		},
 		gameOver:function() {
 			this.clearTimers();
-			this.messages.innerHTML = "<h1>GAME OVER</h1><p>looks like you need to hire a professional!</p><a href='#home'>Call us now!</a><p> -- or -- </p><a href='#quote'>get a quote</a>";
+			this.messages.innerHTML = "<h1>GAME OVER</h1><p>looks like you need to hire a professional!</p><a href='#home'>Call us now!</a><p> -- or -- </p><a href='#quote'>get a quote!</a>";
       this.messages.style.display = 'block';
 		},
     destroy:function(){
